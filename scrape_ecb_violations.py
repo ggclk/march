@@ -231,23 +231,24 @@ def parse_ecb_violation(ecb_html):
     return data
 
 
-def fetch_ecb_data(ecb_violation_number):
+def fetch_ecb_data(ecb_violation_number, ignore_missing=False):
     """
     """
     json_path = os.path.join(ECB_DATA_DIR, ecb_violation_number + '.json')
     if os.path.exists(json_path):
         return json.load(open(json_path)), True
 
-    ecb_html = search_for_ecb_violation(ecb_violation_number)
-    if not ecb_html:
-        return None, True
-    data = parse_ecb_violation(ecb_html)
-    with open(json_path, 'wb') as f:
-        f.write(json.dumps(data).encode('utf-8'))
-    return data, False
+    if non ignore_missing:
+        ecb_html = search_for_ecb_violation(ecb_violation_number)
+        if not ecb_html:
+            return None, True
+        data = parse_ecb_violation(ecb_html)
+        with open(json_path, 'wb') as f:
+            f.write(json.dumps(data).encode('utf-8'))
+        return data, False
 
 
-def scrape_ecb_violations_for_march_data():
+def scrape_ecb_violations_for_march_data(ignore_missing=False):
     """
     """
     seen = set()
@@ -255,7 +256,7 @@ def scrape_ecb_violations_for_march_data():
         ecb_violation_number = row['ecb_violation_number'].strip()
         if ecb_violation_number != '' and ecb_violation_number not in seen:
             seen.add(ecb_violation_number)
-            items = fetch_ecb_data(ecb_violation_number)
+            items = fetch_ecb_data(ecb_violation_number, ignore_missing)
             if not items:
                 continue
             data, cached = items
