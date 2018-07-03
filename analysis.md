@@ -55,7 +55,6 @@ ggplot(df, aes(x=reorder(inspection_day_of_week, count), y=count)) +
 
 ![](analysis_files/figure-html/when-do-march-raids-occur-dow-1.png)<!-- -->
 
-
 There's no discernible pattern to raids by month, except for the holidays.
 
 
@@ -136,13 +135,13 @@ FROM uniq_raid_status
 GROUP BY 1
 ORDER BY 2 DESC;
 ")
-
-ggplot(df, aes(x=reorder(status, count), y=count)) +
+df$percentage <- 100 * (df$count / sum(df$count))
+ggplot(df, aes(x=reorder(status, percentage), y=percentage)) +
   geom_bar(stat='identity', color="white") +
   coord_flip() +
   xlab("Raid outcome") +
-  ylab("Raids") +
-  labs(title="Raids by outcome") +
+  ylab("Percentage of raids") +
+  labs(title="Percentage of raids by outcome") +
   theme_minimal()
 ```
 
@@ -218,7 +217,6 @@ ggplot(df, aes(x=reorder(inspection_day_of_week, per_has_violations), y=per_has_
 ![](analysis_files/figure-html/how-often-fines-wkdy-1.png)<!-- -->
 
 ## What are the outcomes of trials that result from Raids ?
-
 
 
 ```r
@@ -408,12 +406,12 @@ cat('Distribution of fines paid:\n')
 ```
 
 ```r
-summary(df$total_imposed[df$total_imposed>0])
+summary(df$total_paid[df$total_paid>0])
 ```
 
 ```
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##     100     800    1600    2810    3600   40000
+##   100.0   676.3  1200.0  1740.7  2100.1 22503.8
 ```
 
 ```r
@@ -424,6 +422,64 @@ cat(paste0('In just under 5 years, businesses paid $', total_fined, ' as a resul
 ```
 ## In just under 5 years, businesses paid $771120.82 as a result of MARCH raids.
 ```
+
+## How often are fines adjusted?
+
+
+```r
+df <- run_query("
+with uniq_violations AS (
+    SELECT DISTINCT
+        to_date(inspection_date, 'YYYY-MM-DD') as inspection_date,
+        bin_number,
+        ecb_violation_number
+    FROM
+        raid
+    WHERE
+        ecb_violation_number IS NOT NULL
+), violation_stats AS (
+    SELECT
+        og.bin_number,
+        og.inspection_date,
+        SUM(COALESCE(penalty_amount_paid, 0)) as total_paid,
+        SUM(COALESCE(penalty_imposed, 0)) as total_imposed
+    FROM
+        uniq_violations as og
+    LEFT JOIN
+        ecb ON ecb.violation_number = og.ecb_violation_number
+    WHERE
+        hearing_status NOT IN ('DEFAULT', 'DISMISSED')
+    GROUP BY
+        1,2
+), adjustment_stats AS (
+SELECT
+  CASE WHEN total_paid > total_imposed THEN 'adjusted up'
+  WHEN total_paid = total_imposed THEN 'no adjustment'
+  WHEN total_paid < total_imposed THEN 'adjusted down'
+  ELSE 'null'
+  END as adjustment,
+  COUNT(1)::int
+FROM
+  violation_stats
+GROUP BY 1
+ORDER BY 2 DESC
+)
+SELECT
+    *
+FROM
+  adjustment_stats;
+")
+df$percentage <- 100 * (df$count / sum(df$count))
+ggplot(df, aes(x=reorder(adjustment, percentage), y=percentage)) +
+  geom_bar(stat='identity', color='white') +
+  coord_flip() + 
+  xlab('Type of adjustment') +
+  ylab('Percentage of Court cases (only guilty)') +
+  labs(title='Percentage of court cases with adjustments (only guilty)') +
+  theme_minimal()
+```
+
+![](analysis_files/figure-html/how-often-fines-adjusted-1.png)<!-- -->
 
 ## What types of violations are served most often?
 
