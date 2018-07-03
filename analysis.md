@@ -472,7 +472,7 @@ FROM
 df$percentage <- 100 * (df$count / sum(df$count))
 ggplot(df, aes(x=reorder(adjustment, percentage), y=percentage)) +
   geom_bar(stat='identity', color='white') +
-  coord_flip() + 
+  coord_flip() +
   xlab('Type of adjustment') +
   ylab('Percentage of Court cases (only guilty)') +
   labs(title='Percentage of court cases with adjustments (only guilty)') +

@@ -42,15 +42,16 @@ psql -d march -c "CREATE TABLE public.ecb (
   violation_number  TEXT,
   violation_summary TEXT,
   violation_type  TEXT
-);"
+);
+"
 
 echo "==============================================="
 echo "Loading ecb table..."
 
 psql -d march -c "
   COPY public.ecb from '$PRJ_HOME/data/ecb_data.csv'
-  with csv header quote '\"'
-;"
+  with csv header quote '\"';
+"
 
 echo "==============================================="
 echo "Done!"

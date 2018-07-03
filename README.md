@@ -1,4 +1,12 @@
+## MARCH Raid Analysis
 
+See more here: [Analysis (WIP) ](analysis.md)
+
+## Fetch Postgres Dump
+
+```
+scripts/fetch_pg_dump.sh
+```
 
 ## LINKS:
 

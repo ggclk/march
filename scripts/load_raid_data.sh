@@ -9,7 +9,7 @@ echo "==============================================="
 echo "Creating raid table..."
 
 psql -d march -c "
-DROP TABLE IF EXISTS public.three11;
+DROP TABLE IF EXISTS public.raid;
 CREATE TABLE public.raid (
     address character varying,
     borough_name character varying,
@@ -23,7 +23,8 @@ CREATE TABLE public.raid (
     dob_violation_number character varying,
     longitude numeric,
     latitude numeric
-);"
+);
+"
 
 echo "==============================================="
 echo "Loading raid table..."
@@ -31,8 +32,8 @@ echo "Loading raid table..."
 psql -d march -c "
 COPY public.raid
 FROM '$PRJ_HOME/data/march_raids_with_lat.csv'
-with csv header quote '\"'
-;"
+with csv header quote '\"';
+"
 
 echo "==============================================="
 echo "Adding geom to raid table..."

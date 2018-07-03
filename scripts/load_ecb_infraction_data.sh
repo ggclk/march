@@ -30,8 +30,8 @@ echo "Loading ecb infraction code  table..."
 
 psql -d march -c "
   COPY public.ecb_infraction_codes from '$PRJ_HOME/data/ecb_infraction_codes.csv'
-  with csv header quote '\"'
-;"
+  with csv header quote '\"';
+"
 
 echo "==============================================="
 echo "Done!"

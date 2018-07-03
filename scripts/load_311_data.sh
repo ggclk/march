@@ -9,8 +9,8 @@ echo "==============================================="
 echo "Creating 311 table..."
 
 psql -d march -c "
-DROP TABLE IF EXISTS public.three11;
-CREATE TABLE public.three11 (
+DROP TABLE IF EXISTS public.t11_tmp;
+CREATE TABLE public.t11_tmp (
     unique_key  TEXT,
     created_date  TEXT,
     closed_date TEXT,
