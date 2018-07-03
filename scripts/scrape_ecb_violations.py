@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import re
 import os
 import csv
@@ -14,12 +16,14 @@ from bs4 import BeautifulSoup
 MARCH_DATA = 'data/march_raids_with_lat.csv'
 ECB_DATA = 'data/ecb_data.csv'
 ECB_URL = 'http://a810-bisweb.nyc.gov/bisweb/ECBQueryByNumberServlet?ecbin=%s'
-ECB_DATA_DIR = 'data/ecb/'
+ECB_DATA_DIR = 'data/ecb/json'
+ECB_HTML_DIR = 'data/ecb/html'
 ECB_THROTTLE_MSG = b"Due to the high demand it may take a little longer."
 ECG_ERROR_MSG = b"Building Information System Error"
 PRINTABLE_CHARACTERS = set(string.printable)
 ECB_DATE_FORMAT = '%m/%d/%Y'
-SLEEP = 10
+SLEEP = 1
+MAX_REQUESTS = 5
 
 def clean_string(s):
     """
@@ -65,15 +69,28 @@ def clean_bool(s):
         return False
     return True
 
+
 def search_for_ecb_violation(ecb_violation_number):
-    """
-    Fetch an HTML page for an ECB violation number
-    """
+    reqs = 0
     while True:
+        reqs += 1
+        if reqs >= MAX_REQUESTS:
+            print('Quitting after {0} requests...'.format(reqs))
+            return None
+
+        # check for cached html
+        path = os.path.join(ECB_HTML_DIR, ecb_violation_number + '.html')
+        if os.path.exists(path):
+            print('Fetching html from cache: {0}'.format(path))
+            return open(path, 'r').read()
+
+        # request data
         url = ECB_URL % ecb_violation_number
-        print("Fetching: %s from %s" % (ecb_violation_number, url))
+        print('Fetching html for url: {0}'.format(url))
         r = requests.get(url)
         html = r.content
+
+        # check for error messages
         if ECB_THROTTLE_MSG in html:
             print('Retrying...')
             time.sleep(SLEEP)
@@ -81,7 +98,6 @@ def search_for_ecb_violation(ecb_violation_number):
         elif ECG_ERROR_MSG in html:
             print('Not found!')
             return None
-
         else:
             break
     return html
@@ -117,7 +133,7 @@ def parse_ecb_violation(ecb_html):
                     data['block'] = clean_int(f.split('Block:')[1].strip())
 
                 if f.startswith('Lot:'):
-                    data['block'] = clean_int(f.split('Lot:')[1].strip())
+                    data['lot'] = clean_int(f.split('Lot:')[1].strip())
 
                 if f.startswith('Community Board:'):
                     data['community_board'] = clean_int(f.split('Community Board:')[1].strip())
@@ -238,7 +254,7 @@ def fetch_ecb_data(ecb_violation_number, ignore_missing=False):
     if os.path.exists(json_path):
         return json.load(open(json_path)), True
 
-    if non ignore_missing:
+    if not ignore_missing:
         ecb_html = search_for_ecb_violation(ecb_violation_number)
         if not ecb_html:
             return None, True

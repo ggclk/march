@@ -1,1 +1,9 @@
-data/ecb/*.json
+data/ecb/json/*.json
+data/ecb/html/*.html
+*.Rhistory
+data/march.sql
+*.DS_Store
+data/nyct2010*
+data/nycb2010*
+data/311*
+
