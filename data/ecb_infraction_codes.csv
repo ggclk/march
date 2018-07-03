@@ -1,0 +1,396 @@
+ecb_infraction_code,class,description,cure,stipulation,standard_penalty,mitigated_penalty,default_penatly,aggravated_penalty,aggravated_default_penalty,aggreavated_penalty_ii,aggravated_penaltty_ii_max
+101,Class 1,Work without a permit.,No,No,"$1,600",Yes,"$8,000","$4,000","$16,000","$8,000","$25,000"
+103,Class 1,"Occupancy contrary to that allowed by
+the Certificate of Occupancy or Building
+Department records.",No,No,"$2,400",No,"$12,000","$6,000","$24,000","$12,000","$25,000"
+106,Class 1,Miscellaneous violations.,No,No,"$1,600",No,"$8,000","$4,000","$16,000","$8,000","$25,000"
+107,Class 1,"New building or open lot occupied
+without a valid certificate of occupancy.",No,No,"$1,000",No,"$5,000","$2,500","$10,000","$5,000","$25,000"
+108,Class 1,"Altered/changed building occupied
+without a valid Certificate of Occupancy
+as per §28-118.3.1 - §28-118.3.2.",No,No,"$1,000",No,"$5,000","$2,500","$10,000","$5,000","$25,000"
+109,Class 1,"Failure to safeguard all persons and
+property affected by construction
+operations.",No,No,"$2,400",No,"$12,000","$6,000","$24,000","$12,000","$25,000"
+111,Class 1,"Failure to notify the Department prior to
+the commencement of earthwork.",No,No,"$1,200",No,"$6,000","$3,000","$12,000","$6,000","$25,000"
+113,Class 1,"Construction or alteration work w/o a
+permit in manufacturing district for
+residential use.",No,No,"$2,400",No,"$12,000","$6,000","$24,000","$12,000","$25,000"
+114,Class 1,"Work does not conform to approved
+construction documents and/or
+approved amendments in a
+manufacturing district for residential
+use.",No,No,"$4,800",No,"$24,000","$12,000","$25,000","$24,000","$25,000"
+115,Class 1,"Failure to institute/maintain safety
+equipment measures or temporary
+construction – No guard rails",No,No,"$2,400",Yes,"$12,000","$6,000","$24,000","$12,000","$25,000"
+116,Class 1,"Failure to provide required notification
+prior to the commencement of
+demolition.",No,No,"$1,200",No,"$6,000","$3,000","$12,000","$6,000","$25,000"
+117,Class 1,"Failure to carry out demolition
+operations as required by section.",No,No,"$2,400",Yes,"$12,000","$6,000","$24,000","$12,000","$25,000"
+118,Class 1,"Failure to institute/maintain safety
+equipment measures or temporary
+construction – No toe boards.",No,No,"$1,000",No,"$5,000","$2,500","$10,000","$5,000","$25,000"
+119,Class 1,"Failure to have Site Safety Manager or
+Coordinator present as required.",No,No,"$2,400",Yes,"$12,000","$6,000","$24,000","$12,000","$25,000"
+120,Class 1,"Failure to institute/maintain safety
+equipment measures or temporary
+construction – No handrails.",No,No,"$1,000",No,"$5,000","$2,500","$10,000","$5,000","$25,000"
+121,Class 1,"Demolition work without required
+demolition permit",No,No,"$4,800",No,"$24,000","$12,000","$25,000","$24,000","$25,000"
+122,Class 1,"Operation of a Place of Assembly
+without a current Certificate of
+Operation.",No,No,"$1,600",No,"$8,000","$4,000","$16,000","$8,000","$25,000"
+123,Class 1,"Failure to protect adjoining structures
+during excavation operations.",No,No,"$2,400",No,"$12,000","$6,000","$24,000","$12,000","$25,000"
+124,Class 1,"Change in occupancy/use of C of O as
+per §28-118.3.1 - §28-118.3.2 by
+operating a Place of Assembly as per
+when current C of O does not allow
+such occupancy.",No,No,"$1,000",No,"$5,000","$2,500","$10,000","$5,000","$25,000"
+125,Class 1,"Place of Assembly contrary to approved
+construction documents.",No,No,"$1,000",No,"$5,000","$2,500","$10,000","$5,000","$25,000"
+127,Class 1,"Failure to provide unobstructed exit
+passageway.",No,No,"$1,200",No,"$6,000","$3,000","$12,000","$6,000","$25,000"
+128,Class 1,"Use of supported scaffold without a
+scaffold user certificate.",No,No,"$1,600",No,"$8,000","$4,000","$16,000","$8,000","$25,000"
+129,Class 1,"Erected, dismantled repaired,
+maintained, modified or removed
+supported scaffold without a scaffold
+certificate of completion.",No,No,"$2,400",No,"$12,000","$6,000","$24,000","$12,000","$25,000"
+130,Class 1,"Erected or installed supported scaffold
+40 feet or higher without a permit.",No,No,"$1,200",No,"$6,000","$3,000","$12,000","$6,000","$25,000"
+131,Class 1,"Failure to provide sidewalk shed where
+required.",No,No,"$4,800",No,"$24,000","$12,000","$25,000","$24,000","$25,000"
+132,Class 1,"Failure to maintain building in code-
+compliant manner: illumination for exits,
+exit discharges and public corridors per
+BC 1006.1;27-381.",No,No,"$1,000",No,"$5,000","$2,500","$10,000","$5,000","$25,000"
+133,Class 1,"Failure to maintain building in code-
+compliant manner: floor numbering
+signs missing and/or defective per BC
+1019.1.7;27-392",No,No,"$1,000",No,"$5,000","$2,500","$10,000","$5,000","$25,000"
+134,Class 1,"Failure to install photoluminescent exit
+path marking in a high-rise building.",No,No,"$4,800",Yes,"$24,000","$12,000","$25,000","$24,000","$25,000"
+136,Class 1,"Failure to maintain building in code-
+compliant manner: high-rise to provide
+exit sign requirement(s) within exits per
+BC 1011.1.1;27-383.1.",No,No,"$2,400",No,"$12,000","$6,000","$24,000","$12,000","$25,000"
+137,Class 1,"Failure to maintain building in code-
+compliant manner: lack of emergency
+power or storage battery connection to
+exit signs per BC 1011.5.3; 27-384 ©.",No,No,"$4,800",Yes,"$24,000","$12,000","$25,000","$24,000","$25,000"
+138,Class 1,"Failure to maintain building in code-
+compliant manner: lack of emergency
+lighting for exits, exit discharges and
+public corridors per BC 1006.1; 27-542.",No,No,"$1,000",No,"$5,000","$2,500","$10,000","$5,000","$25,000"
+140,Class 1,"Failure to maintain building in code-
+compliant manner: Improper exit/exit
+access doorway arrangement per BC
+1014.2;27-361.",No,No,"$1,200",No,"$6,000","$3,000","$12,000","$6,000","$25,000"
+142,Class 1,"Inadequate safety measures: Oper’n of
+crane/ derrick/hoisting equip in unsafe
+manner )",No,No,"$4,800",No,"$24,000","$12,000","$25,000","$24,000","$25,000"
+144,Class 1,"Licensed Rigger designated an
+unqualified foreman.",No,No,"$1,600",No,"$8,000","$4,000","$16,000","$8,000","$25,000"
+145,Class 1,"Licensed Rigger failed to ensure
+scaffold worker met minimum req.",No,No,"$1,600",No,"$8,000","$4,000","$16,000","$8,000","$25,000"
+149,Class 1,"Failure to perform safe/proper
+inspection of suspended scaffold.",No,No,"$10,000",No,"$25,000","$25,000","$25,000","$25,000","$25,000"
+150,Class 1,"No record of daily inspection of
+Suspended Scaffold performed by
+authorized person at site.",No,No,"$2,400",No,"$12,000","$6,000","$24,000","$12,000","$25,000"
+151,Class 1,"Failure to maintain building in code-
+compliant manner: service equipment –
+elevator per BC 3001.2;27-987.",No,No,"$1,000",No,"$5,000","$2,500","$10,000","$5,000","$25,000"
+152,Class 1,"Failure to promptly report an elevator
+accident involving personal injury
+requiring the services of a physician or
+damage to property.",No,No,"$1,000",No,"$5,000","$2,500","$10,000","$5,000","$25,000"
+154,Class 1,"Failure to maintain building in code-
+compliant manner: service equipment –
+boiler.",No,No,"$1,000",No,"$5,000","$2,500","$10,000","$5,000","$25,000"
+155,Class 1,"Failure to maintain building in code-
+compliant manner: lack of a system of
+automatic sprinklers where required per
+BC 903.2; 27-954.",No,No,"$1,000",No,"$5,000","$2,500","$10,000","$5,000","$25,000"
+157,Class 1,"Plumbing work without a permit in
+manufacturing district for residential
+use.",No,No,"$2,400",No,"$12,000","$6,000","$24,000","$12,000","$25,000"
+158,Class 1,"Failure to have new or altered plumbing
+system tested.",No,No,"$1,000",No,"$5,000","$2,500","$10,000","$5,000","$25,000"
+159,Class 1,"Prohibited sign on sidewalk shed or
+construction fence.",No,No,"$10,000",Yes,"$25,000","$25,000","$25,000","$25,000","$25,000"
+160,Class 1,"Outdoor Ad Co sign on display structure
+without a permit.",No,No,"$10,000",Yes,"$25,000","$25,000","$25,000","$25,000","$25,000"
+161,Class 1,"Outdoor Ad Co sign is contrary
+compliance with construction
+documents.",No,No,"$10,000",Yes,"$25,000","$25,000","$25,000","$25,000","$25,000"
+164,Class 1,"Outdoor Ad Co has impermissible
+advertising sign in an R Dist.",No,No,"$10,000",Yes,"$25,000","$25,000","$25,000","$25,000","$25,000"
+166,Class 1,"Outdoor Ad Co sign(s) in specified C
+Dist exceed surface area limits.",No,No,"$10,000",Yes,"$25,000","$25,000","$25,000","$25,000","$25,000"
+167,Class 1,"Outdoor Ad sign in M Dist exceeds
+surface area limits.",No,No,"$10,000",Yes,"$25,000","$25,000","$25,000","$25,000","$25,000"
+168,Class 1,"Outdoor Ad Co sign in R Dist exceeds
+height limits.",No,No,"$10,000",Yes,"$25,000","$25,000","$25,000","$25,000","$25,000"
+169,Class 1,"Outdoor Ad Co sign exceeds permitted
+height for specified C Dist.",No,No,"$10,000",Yes,"$25,000","$25,000","$25,000","$25,000","$25,000"
+171,Class 1,"Outdoor Ad Sign not permitted in M
+Dist.",No,No,"$10,000",Yes,"$25,000","$25,000","$25,000","$25,000","$25,000"
+172,Class 1,"Additional daily penalty for Class 1
+violation of 28-210.1 - 1 or 2 family
+converted to 4 or more families.",No,No,"1,000/day",No,"$25,000",NA,NA,NA,NA
+174,Class 1,"No Concrete Safety manager present
+during all concrete operations as
+required.",No,No,"$2,400",Yes,"$12,000","$6,000","$24,000","$12,000","$25,000"
+175,Class 1,"Mechanical demolition without plans on
+site.",No,No,"$1,000",No,"$5,000","$2,500","$10,000","$5,000","$25,000"
+176,Class 1,"Failure to provide safety zone for
+demolition operations.",No,No,"$1,000",No,"$5,000","$2,500","$10,000","$5,000","$25,000"
+177,Class 1,"Operation of a crane/derrick without a
+Certificate of Operation.",No,No,"$1,000",No,"$5,000","$2,500","$10,000","$5,000","$25,000"
+178,Class 1,"Misc sign violation under the Zoning
+Resolution by an Outdoor Ad Co",No,Yes,"$10,000",Yes,"$25,000","$25,000","$25,000","$25,000","$25,000"
+179,Class 1,Miscellaneous violations.,No,No,"$1,600",No,"$8,000","$4,000","$16,000","$8,000","$25,000"
+181,Class 1,"Failure to maintain adequate
+housekeeping per section requirements",No,No,"$2,400",No,"$12,000","$6,000","$24,000","$12,000","$25,000"
+182,Class 1,"Work does not conform to approved
+construction documents and/or
+approved amendments",No,No,"$1,000",No,"$5,000","$2,500","$10,000","$5,000","$25,000"
+183,Class 1,"Unsafe storage of Combustible material
+and equipment",No,No,"$2,400",No,"$12,000","$6,000","$24,000","$12,000","$25,000"
+185,Class 1,"Failure to provide evidence or workers
+attending construction & safety course",No,No,"$1,200",No,"$6,000","$3,000","$12,000","$6,000","$25,000"
+186,Class 1,"Failure to conduct workers’ site-specific
+safety orientation program per site
+safety plan.",No,No,"$1,200",No,"$6,000","$3,000","$12,000","$6,000","$25,000"
+187,Class 1,"Unlawful Acts. Failure to comply with an
+order of the Commissioner",No,No,"$2,400",No,"$12,000","$6,000","$24,000","$12,000","$25,000"
+189,Class 1,"Failure to maintain building in a code
+compliant matter. Failure to provide
+number of required means of egress for
+every floor per BC 1018.1 & 27.366",No,No,"$1,200",No,"$6,000","$3,000","$12,000","$6,000","$25,000"
+192,Class 1,"Failure to immediately notify the
+Department of an accident at
+construction/demolition site",No,No,"$2,500",No,"$12,500","$6,250","$25,000","$12,500","$25,000"
+193,Class 1,"Site safety manager/coordinator failed
+to immediately notify the department of
+conditions as required",No,No,"$2,500",No,"$12,500","$6,250","$25,000","$12,500","$25,000"
+194,Class 1,"Unsafe storage of materials during
+construction or demolition",No,No,"$2,400",No,"$12,000","$6,000","$24,000","$12,000","$25,000"
+1A1,Class 1,"Failure to provide erection, jumping,
+climbing, dismantling plan for
+tower/climber crane",No,No,"$2,000",No,"$10,000","$5,000","$20,000","$10,000","$25,000"
+1A2,Class 1,"Failure to conduct safety coordination
+meeting",No,No,"$2,000",No,"$10,000","$5,000","$20,000","$10,000","$25,000"
+1A3,Class 1,"Failure to conduct a pre-jump safety
+meeting",No,No,"$2,000",No,"$10,000","$5,000","$20,000","$10,000","$25,000"
+1A4,Class 1,"Failure to notify the Department prior to
+pre-jump or safety coordination meeting",No,No,"$1,200",No,"$6,000","$3,000","$12,000","$6,000","$25,000"
+1A5,Class 1,"Failure to provide time schedule
+including erection, jumping, climbing or
+dismantling of crane",No,No,"$1,200",No,"$6,000","$3,000","$12,000","$6,000","$25,000"
+1A6,Class 1,No meeting log available,No,No,"$1,200",No,"$6,000","$3,000","$12,000","$6,000","$25,000"
+1A7,Class 1,"Failure file a complete and acceptable
+tower/climber Installation Report per BC
+3319.8.7",No,No,"$2,000",No,"$10,000","$5,000","$20,000","$10,000","$25,000"
+1A8,Class 1,"Erection, jumping, climbing, dismantling
+operations of a tower or climber crane
+not in accordance with 3319.8.8",No,No,"$4,000",No,"$20,000","$10,000","$25,000","$20,000","$25,000"
+1B6,Class 1,"Misc outdoor sign violation of ZR and/or
+Building Code",No,No,"$10,000",No,"$25,000","$25,000","$25,000","$25,000","$25,000"
+1B7,Class 1,"Outdoor Ad. Co. failed to comply with
+Commissioner’s sign-related Order",No,No,"$10,000",Yes,"$25,000","$25,000","$25,000","$25,000","$25,000"
+201,Class 2,Work without a permit.,Yes,Yes,$800,Yes,"$4,000","$2,000","$8,000","$4,000","$10,000"
+203,Class 2,"Occupancy contrary to that allowed by
+the Certificate of Occupancy or Building
+Department records.",Yes,Yes,"$1,200",Yes,"$6,000","$3,000","$10,000","$6,000","$10,000"
+205,Class 2,Illegal use in residential district.,Yes,No,$800,Yes,"$4,000","$2,000","$8,000","$4,000","$10,000"
+206,Class 2,Miscellaneous violations.,Yes,Yes,$800,Yes,"$4,000","$2,000","$8,000","$4,000","$10,000"
+207,Class 2,Work without a permit: Expired permit.,Yes,Yes,$800,Yes,"$4,000","$2,000","$8,000","$4,000","$10,000"
+208,Class 2,"Altered/changed building occupied
+without a valid Certificate of Occupancy
+as per §28-118.3.1 - §28-118.3.2.",Yes,Yes,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+209,Class 2,"Failure to safeguard all persons and
+property affected by construction
+operations.",No,No,"$1,200",No,"$6,000","$3,000","$10,000","$6,000","$10,000"
+210,Class 2,"Failure to provide approved/accepted
+plans at job site at time of inspection.",Yes,No,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+211,Class 2,"Job site fence not constructed pursuant
+to subsection.",Yes,No,$800,Yes,"$4,000","$2,000","$8,000","$4,000","$10,000"
+212,Class 2,"Failure to maintain adequate
+housekeeping per section requirements.",Yes,No,$800,Yes,"$4,000","$2,000","$8,000","$4,000","$10,000"
+213,Class 2,"Construction or alteration work w/o a
+permit in manufacturing district for
+residential use.",No,No,"$1,500",Yes,"$7,500","$3,750","$10,000","$7,500","$10,000"
+214,Class 2,"Work does not conform to approved
+construction documents and/or
+approved amendments in a
+manufacturing district for residential
+use.",No,No,"$2,400",Yes,"$10,000","$6,000","$10,000","$10,000","$10,000"
+215,Class 2,"Failure to notify the Department prior to
+the cancellation of earthwork .",No,No,"$1,200",Yes,"$6,000","$3,000","$10,000","$6,000","$10,000"
+217,Class 2,"Failure to provide/post sign(s) at job site
+pursuant to subsection.",Yes,No,$800,Yes,"$4,000","$2,000","$8,000","$4,000","$10,000"
+218,Class 2,"Failure to post D.O.T. permit for
+street/sidewalk closing.",Yes,No,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+219,Class 2,"Approved Place of Assembly plans not
+available for inspection.",Yes,No,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+220,Class 2,"Failure to post permit for work at
+premises",Yes,Yes,$800,Yes,"$4,000","$2,000","$8,000","$4,000","$10,000"
+221,Class 2,"Failure to maintain building in code-
+compliant manner: provide required
+corridor width per BC 1016.2;27-369",Yes,No,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+223,Class 2,"Sidewalk shed does not meet code
+specifications.",No,No,"$2,400",No,"$10,000","$6,000","$10,000","$10,000","$10,000"
+224,Class 2,"Change in occupancy/use of C of O as
+per §28-118.3.1 - §28-118.3.2 by
+operating a Place of Assembly as per
+when current C of O does not allow
+such occupancy.",Yes,No,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+225,Class 2,"Place of Assembly contrary to approved
+construction documents.",Yes,Yes,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+231,Class 2,"Failure to provide sidewalk shed where
+required",No,No,"$2,400",No,"$10,000","$6,000","$10,000","$10,000","$10,000"
+232,Class 2,"Failure to maintain building in code-
+compliant manner: illumination for exits,
+exit discharges and public corridors per
+BC 1006.1;27-381.",Yes,No,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+233,Class 2,"Failure to maintain building in code-
+compliant manner: floor numbering
+signs missing and/or defective per BC
+1019.1.7;27-392",Yes,Yes,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+234,Class 2,"Emergency signs at elevator call
+stations missing, defective or non-
+compliant with section requirements.",Yes,Yes,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+235,Class 2,"Stair identification signs missing and/or
+defective.",Yes,Yes,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+236,Class 2,"Failure to maintain building in code-
+compliant manner: high-rise to provide
+exit sign requirement(s) within exits per
+BC 1011.1.1;27-383.1.",Yes,No,"$1,200",Yes,"$6,000","$3,000","$10,000","$6,000","$10,000"
+237,Class 2,"Failure to provide power for emergency
+exit lighting.",Yes,No,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+238,Class 2,"Failure to maintain building in code-
+compliant manner: lack of emergency
+lighting for exits, exit discharges and
+public corridors per BC 1006.1; 27-542.",Yes,No,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+239,Class 2,"Failure to maintain building in code-
+compliant manner: no fire stopping per
+BC 712.3; 27-345.",Yes,No,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+240,Class 2,"Failure to install an acceptable two-way
+voice communication system with
+central station connection.",Yes,No,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+242,Class 2,"Failure to file an Architect/Engineer
+report certifying exit/directional signs
+are connected to emergency power
+source/storage battery equipment.",Yes,No,$800,Yes,"$4,000","$2,000","$8,000","$4,000","$10,000"
+244,Class 2,"Licensed Rigger designated an
+unqualified foreman.",No,No,$800,Yes,"$4,000","$2,000","$8,000","$4,000","$10,000"
+245,Class 2,"Licensed Rigger failed to ensure
+scaffold worker met minimum req.",No,No,$800,Yes,"$4,000","$2,000","$8,000","$4,000","$10,000"
+246,Class 2,"Failure to provide/use lifeline while
+working on scaffold.",No,No,$800,Yes,"$4,000","$2,000","$8,000","$4,000","$10,000"
+247,Class 2,Illegal use in a commercial district.,Yes,No,$800,Yes,"$4,000","$2,000","$8,000","$4,000","$10,000"
+248,Class 2,Illegal use in a manufacturing district.,Yes,No,$800,Yes,"$4,000","$2,000","$8,000","$4,000","$10,000"
+249,Class 2,"Failure to maintain building in code-
+compliant manner: failure to provide non
+combustible proscenium curtain per
+BC410.3.5; 27-546.",Yes,Yes,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+250,Class 2,"Failed to obtain a temporary
+construction permit prior to
+installation/use of sidewalk shed.",Yes,No,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+251,Class 2,"Failure to maintain building in code-
+compliant manner: service equipment –
+elevator per BC 3001.2;27-987.",Yes,Yes,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+252,Class 2,Exit door not self-closing.,Yes,No,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+253,Class 2,"Operation of a crane/derrick without a
+Certificate of Onsite Inspection.",No,No,"$2,400",No,"$10,000","$6,000","$10,000","$10,000","$10,000"
+254,Class 2,"Failure to maintain building in code-
+compliant manner: service equipment –
+boiler.",Yes,Yes,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+255,Class 2,"Failure to maintain building in code-
+compliant manner: lack of a system of
+automatic sprinklers where required per
+BC 903.2; 27-954.",No,No,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+256,Class 2,"Gas being supplied to building without
+inspection and certification by DOB.",No,No,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+257,Class 2,"Plumbing work without a permit in
+manufacturing district for residential
+use.",No,Yes,"$1,500",Yes,"$7,500","$3,750","$10,000","$7,500","$10,000"
+258,Class 2,"Failure to have new or altered plumbing
+system tested.",Yes,No,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+260,Class 2,"Operation of crane/derrick without
+Certificate of Approval/Certificate of
+Operation.",No,No,"$2,400",No,"$10,000","$6,000","$10,000","$10,000","$10,000"
+261,Class 2,"Failed to notify Department prior to
+use/inst. off C-hooks/outrigger beams in
+connection with Suspended Scaffold",No,No,$800,Yes,"$4,000","$2,000","$8,000","$4,000","$10,000"
+262,Class 2,"Operation of an elevator without
+equipment use permit or service
+equipment Certificate of Compliance.",Yes,Yes,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+270,Class 2,"Piping installed in
+elevator/counterweight hoistway.",Yes,No,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+273,Class 2,"Additional monthly civil penalties for
+continued violations.",No,No,"$250/mont
+h",No,"$10,000",NA,NA,NA,NA
+274,Class 2,"Outdoor sign on display structure
+without a permit.",No,Yes,"$1,200",Yes,"$6,000","$3,000","$10,000","$6,000","$10,000"
+275,Class 2,"Prohibited sign on awning, canopy, or
+marquee in C Dist.",No,Yes,"$1,200",Yes,"$6,000","$3,000","$10,000","$6,000","$10,000"
+276,Class 2,"Sign(s) in specified C Dist exceed(s)
+surface area restrictions.",No,Yes,"$1,200",Yes,"$6,000","$3,000","$10,000","$6,000","$10,000"
+277,Class 2,"Sign in specified C Dist extends beyond
+street line limitation.",No,Yes,"$1,200",Yes,"$6,000","$3,000","$10,000","$6,000","$10,000"
+279,Class 2,Miscellaneous violations.,Yes,Yes,$800,Yes,"$4,000","$2,000","$8,000","$4,000","$10,000"
+281,Class 2,"Misc sign violation under the Zoning
+Resolution",No,Yes,$800,Yes,"$4,000","$2,000","$8,000","$4,000","$10,000"
+282,Class 2,"Work does not conform to approved
+construction documents and/or
+approved amendments.",Yes,Yes,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+283,Class 2,"Violation of parking regulations in a
+residential district.",Yes,No,$800,Yes,"$4,000","$2,000","$8,000","$4,000","$10,000"
+284,Class 2,"Miscellaneous violations of the Zoning
+Resolution.",Yes,No,$800,Yes,"$4,000","$2,000","$8,000","$4,000","$10,000"
+298,Class 2,"Additional monthly penalty for continued
+violation of 28-210.1",No,No,"$250/mont
+h",No,"$10,000",NA,NA,NA,NA
+299,Class 1,"Additional daily civil penalties for
+continued violations.",No,No,"$1,000/day",No,"$25,000",NA,NA,NA,NA
+2A1,Class 2,"Outdoor sign permit/app contrary to
+Code and ZR req.",No,No,"$2,400",No,"$10,000","$10,000","$10,000","$10,000","$10,000"
+2A3,Class 2,Fail to complete/implement/amend bike,No,No,$800,Yes,"$4,000","$2,000","$8,000","$4,000","$10,000"
+2A5,Class 2,"Fail to post a bike acc plan/ltr of
+excep/notice of plan/letter.",No,No,$800,Yes,"$4,000","$2,000","$8,000","$4,000","$10,000"
+2A6,Class 2,"Fail to timely file bike acc plan or
+amendment with DOT.",No,No,$800,Yes,"$4,000","$2,000","$8,000","$4,000","$10,000"
+301,Class 3,Work without a permit.,Yes,Yes,$200,Yes,$500,$500,$500,$500,$500
+303,Class 3,"Occupancy contrary to that allowed by
+the Certificate of Occupancy or Building
+Department records.",Yes,Yes,$400,Yes,$500,$500,$500,$500,$500
+306,Class 3,Miscellaneous violations.,Yes,Yes,$300,Yes,$500,$500,$500,$500,$500
+307,Class 3,Fence exceeds permitted height.,Yes,Yes,$200,Yes,$500,$500,$500,$500,$500
+351,Class 3,"Failure to maintain building in code-
+compliant manner: service equipment –
+elevator per BC 3001.2;27-987.",Yes,Yes,$200,Yes,$500,$500,$500,$500,$500
+354,Class 3,"Failure to maintain building in code-
+compliant manner: service equipment –
+boiler.",Yes,Yes,$200,Yes,$500,$500,$500,$500,$500
+379,Class 3,Miscellaneous violations.,Yes,Yes,$300,Yes,$500,$500,$500,$500,$500
+382,Class 3,"Work does not conform to approved
+construction documents and/or
+approved amendments.",Yes,Yes,$200,Yes,$500,$500,$500,$500,$500
+383,Class 3,"Violation of parking regulations in a
+residential district.",Yes,No,$300,Yes,$500,$500,$500,$500,$500
+384,Class 3,"Miscellaneous violations of the Zoning
+Resolution.",Yes,No,$300,Yes,$500,$500,$500,$500,$500
+385,Class 3,Illegal use in residential district,Yes,Yes,$300,No,$500,$500,$500,$500,$500
+222, Class 2, Operation of a Place of Assembly without a current Certificate of Operation,Yes,No,$800,Yes,"$4,000","$2,000","$8,000","$4,000","$10,000"
+102,Class 1,"Failure to maintain building in code- compliant manner.",No,No,"$1,000",No,"$5,000","$2,500","$10,000","$5,000","$25,000"
+202,Class 2,Failure to maintain building in code- compliant manner.,Yes,Yes,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+126,Class 1,"Failure to maintain building in codecompliant manner: Use of prohibited door and/or hardware per BC 1008.1.8; 27-371(j).",No,No,"$1,000",No,"$5,000","$2,500","$10,000","$5,000","$25,000"
+226,Class 2,"Failure to maintain building in codecompliant manner: Use of prohibited door and/or hardware per BC 1008.1.8; 27-371(j).",Yes,No,$500,Yes,"$2,500","$1,250","$5,000","$2,500","$10,000"
+301,Class 3,"Failure to maintain building in code- compliant manner.",Yes,Yes,$200,Yes,$500,$500,$500,$500,$500

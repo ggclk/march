@@ -9,31 +9,27 @@ output:
 
 ## Setup
 
-```{r setup, echo=FALSE}
-WD <- '/Users/brianabelson/prj/gltd/march'
-DB_NAME <- 'march'
-setwd(WD)
-require(ggplot2)
-require(DBI)
-require(RPostgres)
+
+```
+## Loading required package: ggplot2
 ```
 
-```{r utils, echo=FALSE}
-
-run_query <- function(sql) {
-  conn <- DBI::dbConnect(RPostgres::Postgres(),
-                 dbname = DB_NAME,
-                 host = 'localhost',
-                 port = 5432)
-  DBI::dbGetQuery(conn, sql)
-}
 ```
+## Loading required package: DBI
+```
+
+```
+## Loading required package: RPostgres
+```
+
+
 
 ## When Do MARCH raids result in violations?
 
 Raids overwhelmingly happen on weekends (Friday, Saturday, Sunday)
 
-```{r when-do-march-raids-occur-dow, fig.height=6, fig.width=6}
+
+```r
 df <- run_query("
 WITH uniq_raid AS (
    SELECT DISTINCT
@@ -57,10 +53,13 @@ ggplot(df, aes(x=reorder(inspection_day_of_week, count), y=count)) +
   theme_minimal()
 ```
 
+![](analysis_files/figure-html/when-do-march-raids-occur-dow-1.png)<!-- -->
+
 
 There's no discernible pattern to raids by month, except for the holidays.
 
-```{r when-do-march-raids-occur-month, fig.height=6, fig.width=6}
+
+```r
 df <- run_query("
 WITH uniq_raid AS (
    SELECT DISTINCT
@@ -85,7 +84,10 @@ ggplot(df, aes(x=reorder(inspection_month, -inspection_month_num), y=count)) +
   theme_minimal()
 ```
 
-```{r when-do-march-raids-occur-year, fig.height=6, fig.width=6}
+![](analysis_files/figure-html/when-do-march-raids-occur-month-1.png)<!-- -->
+
+
+```r
 df <- run_query("
 WITH uniq_raid AS (
    SELECT DISTINCT
@@ -108,8 +110,11 @@ ggplot(df, aes(x=inspection_year, y=count)) +
   theme_minimal()
 ```
 
+![](analysis_files/figure-html/when-do-march-raids-occur-year-1.png)<!-- -->
+
 ## What are the outcomes of Raids ?
-```{r what-are-raid-outcomes}
+
+```r
 df <- run_query("
 WITH uniq_raid_status AS (
     SELECT DISTINCT
@@ -139,12 +144,14 @@ ggplot(df, aes(x=reorder(status, count), y=count)) +
   ylab("Raids") +
   labs(title="Raids by outcome") +
   theme_minimal()
-
 ```
+
+![](analysis_files/figure-html/what-are-raid-outcomes-1.png)<!-- -->
 
 ## How often do MARCH raids result in fines?
 
-```{r how-often-fines, fig.height=6, fig.width=6}
+
+```r
 df <- run_query("
 SELECT
     to_date(inspection_date, 'YYYY-MM-DD') as inspection_date,
@@ -161,14 +168,24 @@ ggplot(df, aes(x=count)) +
   ylab("Raids") +
   labs(title="Number of Violations per Raid") +
   theme_minimal()
+```
+
+![](analysis_files/figure-html/how-often-fines-1.png)<!-- -->
+
+```r
 percent <- (sum(ifelse(df$count == 0, 0, 1)) / nrow(df)) * 100
 cat(paste0('March RAIDS result in violations ', percent, '% of the time.\n'))
+```
+
+```
+## March RAIDS result in violations 37.6% of the time.
 ```
 
 ## Do Raids result in Fines on certain days more often?
 
 
-```{r how-often-fines-wkdy, fig.height=6, fig.width=6}
+
+```r
 df <- run_query("
 WITH uniq_raid AS (
 
@@ -198,10 +215,13 @@ ggplot(df, aes(x=reorder(inspection_day_of_week, per_has_violations), y=per_has_
   theme_minimal()
 ```
 
+![](analysis_files/figure-html/how-often-fines-wkdy-1.png)<!-- -->
+
 ## What are the outcomes of trials that result from Raids ?
 
 
-```{r court-outcomes, fig.height=6, fig.width=9}
+
+```r
 df <- run_query("
 with uniq_violations AS (
    SELECT DISTINCT
@@ -247,7 +267,27 @@ ORDER BY 2 DESC;
 ")
 df$percentage <- round(100.0 * df$count / sum(df$count), 1)
 cat('Breakdown of court outcomes for raids:\n')
+```
+
+```
+## Breakdown of court outcomes for raids:
+```
+
+```r
 df
+```
+
+```
+##               outcome count percentage
+## 1          full guilt   477       67.7
+## 2        full default   105       14.9
+## 3      full dismissal    71       10.1
+## 4   dismissal + guilt    26        3.7
+## 5     default + guilt    24        3.4
+## 6 dismissal + default     2        0.3
+```
+
+```r
 ggplot(df, aes(x=reorder(outcome, count), y=percentage)) +
   geom_bar(stat='identity', color="white") +
   coord_flip() +
@@ -255,20 +295,41 @@ ggplot(df, aes(x=reorder(outcome, count), y=percentage)) +
   ylab('Percentage of Raids') +
   labs(title='Raids by Court Outcomes') +
   theme_minimal()
+```
 
+![](analysis_files/figure-html/court-outcomes-1.png)<!-- -->
+
+```r
 partial_guilt_per <- round(100.0 * sum(ifelse(grepl('.*guilt.*', df$outcome), df$count, 0)) / sum(df$count), 1)
 cat(paste0('Court trials result in some kind of guilt ', partial_guilt_per, '% of the time.\n'))
+```
 
+```
+## Court trials result in some kind of guilt 74.8% of the time.
+```
+
+```r
 partial_dismissal_per <- round(100.0 * sum(ifelse(grepl('.*dismissal.*', df$outcome), df$count, 0)) / sum(df$count), 1)
 cat(paste0('Court trials resultin some kind of dismissal ', partial_dismissal_per, '% of the time.\n'))
+```
 
+```
+## Court trials resultin some kind of dismissal 14% of the time.
+```
+
+```r
 partial_default_per <- round(100.0 * sum(ifelse(grepl('.*default.*', df$outcome), df$count, 0)) / sum(df$count), 1)
 cat(paste0('Court trials result in some kind of default ', partial_default_per, '% of the time.\n'))
 ```
 
+```
+## Court trials result in some kind of default 18.6% of the time.
+```
+
 ## How large are fines associated with Raids ?
 
-```{r how-large-are-fines, fig.height=6, fig.width=9}
+
+```r
 df <- run_query("
 with uniq_violations AS (
    SELECT DISTINCT
@@ -297,26 +358,77 @@ ggplot(df[df$total_imposed>0,], aes(x=total_imposed)) +
   xlab('Total Fines Imposed in Dollars (Excluding Dismissals)') +
   ylab('Raids') +
   theme_minimal()
+```
+
+![](analysis_files/figure-html/how-large-are-fines-1.png)<!-- -->
+
+```r
 cat('Distribution of fines imposed:\n')
+```
+
+```
+## Distribution of fines imposed:
+```
+
+```r
 summary(df$total_imposed[df$total_imposed>0])
+```
+
+```
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##     100     800    1600    2810    3600   40000
+```
+
+```r
 total_fined <- sum(df$total_imposed)
 cat(paste0('In just under 5 years, businesses were fined $', total_fined, ' as a result of MARCH raids.\n'))
+```
 
+```
+## In just under 5 years, businesses were fined $1593405 as a result of MARCH raids.
+```
+
+```r
 ggplot(df[df$total_paid>0,], aes(x=total_paid)) +
   geom_histogram(binwidth=1000, color="white") +
   labs(title='Distribution of Fines Paid Per Raid (Excluding Dismissals)') +
   xlab('Total Fines Paid in Dollars') +
   ylab('Raids') +
   theme_minimal()
+```
+
+![](analysis_files/figure-html/how-large-are-fines-2.png)<!-- -->
+
+```r
 cat('Distribution of fines paid:\n')
+```
+
+```
+## Distribution of fines paid:
+```
+
+```r
 summary(df$total_imposed[df$total_imposed>0])
+```
+
+```
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##     100     800    1600    2810    3600   40000
+```
+
+```r
 total_fined <- sum(df$total_paid)
 cat(paste0('In just under 5 years, businesses paid $', total_fined, ' as a result of MARCH raids.\n'))
 ```
 
+```
+## In just under 5 years, businesses paid $771120.82 as a result of MARCH raids.
+```
+
 ## What types of violations are served most often?
 
-```{r types-of-violations, fig.width=10, fig.height=10}
+
+```r
 df <- run_query("
 SELECT
   SPLIT_PART(trim(regexp_replace(code.description, '[[:cntrl:]]', ' ')), 'as per ', 1) as description,
@@ -341,7 +453,11 @@ ggplot(head(df, 10), aes(x=reorder(description, count), y=count)) +
   ylab('Count') +
   labs(title='Top ten infractions by count') +
   theme_minimal()
+```
 
+![](analysis_files/figure-html/types-of-violations-1.png)<!-- -->
+
+```r
 ggplot(head(df, 10), aes(x=reorder(description, avg_penalty), y=avg_penalty)) +
   geom_bar(stat='identity', color='white') +
   coord_flip() +
@@ -349,7 +465,11 @@ ggplot(head(df, 10), aes(x=reorder(description, avg_penalty), y=avg_penalty)) +
   ylab('Avg Fine (Dollars)') +
   labs(title='Top ten infractions by avg fine') +
   theme_minimal()
+```
 
+![](analysis_files/figure-html/types-of-violations-2.png)<!-- -->
+
+```r
 ggplot(head(df, 10), aes(x=reorder(description, total_penalty), y=total_penalty)) +
   geom_bar(stat='identity', color='white') +
   coord_flip() +
@@ -357,7 +477,11 @@ ggplot(head(df, 10), aes(x=reorder(description, total_penalty), y=total_penalty)
   ylab('Total Fine (Dollars)') +
   labs(title='Top ten infractions by total fine') +
   theme_minimal()
+```
 
+![](analysis_files/figure-html/types-of-violations-3.png)<!-- -->
+
+```r
 ggplot(head(df, 10), aes(x=reorder(description, max_penalty), y=max_penalty)) +
   geom_bar(stat='identity', color='white') +
   coord_flip() +
@@ -366,6 +490,8 @@ ggplot(head(df, 10), aes(x=reorder(description, max_penalty), y=max_penalty)) +
   labs(title='Top ten infractions by max fine') +
   theme_minimal()
 ```
+
+![](analysis_files/figure-html/types-of-violations-4.png)<!-- -->
 
 
 
